@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:orientation="horizontal"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp">
+
+    <!-- 输入的搜索信息 -->
+    <LinearLayout
+        android:id="@+id/rlay_map_search"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dip"
+        android:layout_marginTop="6.5dp"
+        android:layout_marginBottom="6.5dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_main_search"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:paddingTop="2.5dp"
+            android:src="@mipmap/ic_search_grey" />
+        <!-- 输入的搜索信息 -->
+        <TextView
+            android:id="@+id/et_map_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/search_hint"
+            android:lines="1"
+            android:paddingLeft="13dp"
+            android:paddingRight="16dp"
+            android:textColor="@color/text_hint_color_8c"
+            android:textColorHint="@color/text_hint_color_8c"
+            android:textSize="@dimen/text_size_12" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_actionbar_map_list_of_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip"
+        android:src="@mipmap/ic_actionbar_list" />
+
+</LinearLayout>

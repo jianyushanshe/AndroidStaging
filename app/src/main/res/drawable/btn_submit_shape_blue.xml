@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 顶部带圆角 白色背景 灰色边框  长方体 -->
+    <item>
+        <selector>
+            <item android:state_enabled="false">
+                <shape>
+                    <solid android:color="@color/common_gray_color"/>
+
+                    <corners
+                        android:bottomLeftRadius="100dp"
+                        android:bottomRightRadius="100dp"
+                        android:topLeftRadius="100dp"
+                        android:topRightRadius="100dp"  />
+
+                    <stroke
+                        android:width="0dp"
+                        android:color="@color/app_theme_color" />
+                </shape>
+            </item>
+            <item android:state_pressed="false">
+                <shape>
+                    <solid android:color="@color/common_color_login"/>
+
+                    <corners
+                        android:bottomLeftRadius="100dp"
+                        android:bottomRightRadius="100dp"
+                        android:topLeftRadius="100dp"
+                        android:topRightRadius="100dp" />
+
+                    <stroke
+                        android:width="0dp"
+                        android:color="@color/app_theme_color" />
+                </shape>
+            </item>
+            <item android:state_pressed="true">
+                <shape>
+                    <solid android:color="@color/common_color_login_press" />
+
+                    <corners
+                        android:bottomLeftRadius="100dp"
+                        android:bottomRightRadius="100dp"
+                        android:topLeftRadius="100dp"
+                        android:topRightRadius="100dp" />
+
+                    <stroke
+                        android:width="0dp"
+                        android:color="@color/app_theme_color" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+
+</layer-list>

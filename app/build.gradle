@@ -1,0 +1,165 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'//kotlin注解插件
+    id 'kotlin-android-extensions'
+}
+//网络环境全局变量
+def GET_DEVELOP = "0" //开发环境
+def GET_BETA = "1"     //测试环境
+def GET_RELEASE = "2" //正式环境
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.jianyushanshe.androidstaging"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        buildConfigField "int", "GET_DEVELOP", GET_DEVELOP
+        buildConfigField "int", "GET_BETA", GET_BETA
+        buildConfigField "int", "GET_RELEASE", GET_RELEASE
+        //设置网络访问地址
+        buildConfigField "String", "DEVELOP_URL", '"https://www.baidu.com"'//开发环境
+        buildConfigField "String", "BETA_URL", '"https://www.baidu.com"'//测试环境
+        buildConfigField "String", "RELEASE_URL", '"https://www.baidu.com"'//正式环境
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        test {
+            storeFile file('../jianyushanshetest.jks')
+            storePassword rootProject.ext.signing.storePassword
+            keyAlias rootProject.ext.signing.keyAlias
+            keyPassword rootProject.ext.signing.keyPassword
+        }
+
+        release {
+            storeFile file('../jianyushanshetest.jks')
+            storePassword rootProject.ext.signing.storePassword
+            keyAlias rootProject.ext.signing.keyAlias
+            keyPassword rootProject.ext.signing.keyPassword
+        }
+    }
+
+
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java']
+            jniLibs.srcDirs = ['libs']
+        }
+        debug {
+            java.srcDirs = ['src/debug/java']
+        }
+        release {
+            java.srcDirs = ['src/release/java']
+        }
+    }
+
+    buildTypes {
+        debug {
+            pseudoLocalesEnabled true
+            multiDexEnabled true
+            applicationIdSuffix '.debug'
+            versionNameSuffix '-debug'
+
+            buildConfigField "int", "URL_TYPE", GET_DEVELOP//开发环境
+            resValue "string", "app_name", "我的-开发"
+
+            signingConfig signingConfigs.test
+        }
+
+        release {
+            debuggable true
+            shrinkResources false
+            minifyEnabled false // 暂时不启用混淆
+            zipAlignEnabled true
+
+            buildConfigField "int", "URL_TYPE", GET_RELEASE//正式环境
+
+            resValue "string", "app_name", "我的-生产"
+
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        beta {
+            initWith release
+            matchingFallbacks = ['release']
+
+            applicationIdSuffix '.beta'
+            versionNameSuffix '-beta'
+
+            buildConfigField "int", "URL_TYPE", GET_BETA//测试环境
+            resValue "string", "app_name", "我的-测试"
+        }
+    }
+    buildFeatures {
+        dataBinding = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        abortOnError false
+        disable 'ContentDescription'
+        disable 'SmallSp'
+        disable 'RtlSymmetry'
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlin"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    //常用依赖库
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.7'
+    implementation 'androidx.recyclerview:recyclerview:1.2.0-beta01'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    kapt 'com.github.bumptech.glide:compiler:4.10.0'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+    implementation 'jp.wasabeef:glide-transformations:4.1.0'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    implementation 'com.permissionx.guolindev:permissionx:1.2.2'
+
+    //Android Jetpack 组件
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.work:work-runtime:2.4.0'
+
+    //特定功能依赖库
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.4'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    implementation 'com.scwang.smart:refresh-header-classics:2.0.1'
+    implementation'com.scwang.smart:refresh-footer-classics:2.0.1'
+    implementation 'com.scwang.smart:refresh-layout-kernel:2.0.1'
+    implementation 'com.github.zhpanvip:BannerViewPager:3.1.2'
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.android.support:multidex:1.0.3'
+}

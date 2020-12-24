@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+
+    <files-path
+        name="log_internal"
+        path="logger/" />
+
+    <files-path
+        name="download_internal"
+        path="download/" />
+
+    <external-files-path
+        name="log"
+        path="logger/" />
+
+    <external-files-path
+        name="download"
+        path="download/" />
+
+</paths>

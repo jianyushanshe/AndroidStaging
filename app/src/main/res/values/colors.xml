@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--App浅色主色调-->
+    <color name="app_theme_color">#3C94F6</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#FFFFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFFFF</color>
+    <color name="colorAccent">#61f2d4</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="bg_grey">#F7FAFC</color>
+    <color name="translucent_grey">#80000000</color>
+
+
+    <color name="colorAccentAlpha60">#6661f2d4</color>
+    <color name="colorTextPrimary">#444444</color>
+    <color name="colorTextPrimaryDark">#333333</color>
+    <color name="colorTextSecondary">#888888</color>
+    <color name="transparent">#00000000</color>
+    <color name="whiteAlpha85">#26ffffff</color>
+    <color name="whiteAlpha80">#33ffffff</color>
+    <color name="whiteAlpha60">#66ffffff</color>
+    <color name="whiteAlpha50">#80ffffff</color>
+    <color name="whiteAlpha35">#a6ffffff</color>
+    <color name="whiteAlpha25">#bfffffff</color>
+    <color name="whiteAlpha20">#ccffffff</color>
+    <color name="whiteAlpha10">#e6ffffff</color>
+    <color name="blackAlpha95">#0d000000</color>
+    <color name="blackAlpha85">#26000000</color>
+    <color name="blackAlpha80">#33000000</color>
+    <color name="blackAlpha70">#4d000000</color>
+    <color name="blackAlpha60">#66000000</color>
+    <color name="blackAlpha55">#73000000</color>
+    <color name="blackAlpha50">#80000000</color>
+    <color name="blackAlpha45">#8c000000</color>
+    <color name="blackAlpha20">#cc000000</color>
+    <color name="blue">#4687d7</color>
+    <color name="gray">#ededed</color>
+    <color name="grayDark">#adadad</color>
+    <color name="loading">#cdcdcd</color>
+    <color name="gray_bg">#e5e5e4</color>
+    <color name="text_black">#353941</color>
+    <color name="actionbar_right_text">#788FA3</color>
+    <!-- 分割线的颜色 -->
+    <color name="line_grey_deep">#8B8C8C</color>
+    <color name="line_grey_deep_2">#808080</color>
+    <color name="line_grey">#eaeaea</color>
+    <!-- dialog -->
+    <color name="dialog_tip_tx_color">#ff494646</color>
+    <color name="dialog_bt_tx_color_y">#fff5bc0c</color>
+    <color name="dialog_bt_tx_color_g">#ff808080</color>
+    <color name="dialog_bt_tx_color_g_1">#757575</color>
+    <color name="text_black_90">#e6000000</color>
+    <!--actionbar的颜色-->
+    <color name="actionbar_color">#FFFFFF</color>
+    <color name="actionbar_bg_color">#EDEDED</color>
+    <color name="grey_click">#F4F4F4</color>
+    <!--按钮点默认的颜色 -->
+    <color name="common_color_login">#3C94F6</color>
+    <!--按钮点击时的颜色 -->
+    <color name="common_color_login_press">#0590E5</color>
+    <!--按钮不可用的颜色 -->
+    <color name="common_gray_color">#84CEFC</color>
+    <color name="text_hint_color">#52000000</color>
+    <color name="text_hint_color_8c">#A6A6A6</color>
+    <!--页面灰色背景 -->
+    <color name="glay10_fee_item_bg">#F2F2F2</color>
+</resources>

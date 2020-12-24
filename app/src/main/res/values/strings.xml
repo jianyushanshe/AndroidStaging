@@ -1,0 +1,78 @@
+<resources>
+    <!-- 网络 -->
+    <string name="network_error">网络错误</string>
+    <string name="error_view_tip">点击屏幕重试</string>
+    <string name="json_data_error">数据解析异常</string>
+    <string name="network_connect_error">网络连接异常</string>
+    <string name="network_connect_timeout">网络连接超时</string>
+    <string name="no_route_to_host">无法连接到服务器</string>
+    <string name="network_response_code_error">服务器状态码异常：</string>
+    <string name="unknown_error">发生未知错误</string>
+    <string name="net_work_state_error">无法连接到网络，请检查网络</string>
+    <string name="hint_gps_is_not_open">无法获取您的位置信息，请打开定位服务</string>
+    <string name="dialog_login_view_tip">检测到您的登录状态已过期，是否需要重新登录?</string>
+    <!--共用-->
+    <string name="ok">确定</string>
+    <string name="ok_space">确 定</string>
+    <string name="cancel">取消</string>
+    <string name="setting">设置</string>
+    <string name="commit">提交</string>
+    <string name="save">保存</string>
+    <string name="unknown">未知</string>
+    <string name="re_get">重新获取</string>
+    <string name="forget_pw">忘记密码</string>
+    <string name="change_pw">修改密码</string>
+    <string name="reset_pw_ok">密码重置成功！</string>
+    <string name="reset_pw_faild">重置密码失败，请重试</string>
+    <string name="register">注册</string>
+    <string name="phone_number_register">手机号注册</string>
+    <string name="input_phone_number_hint">请输入手机号</string>
+    <string name="register_ok">恭喜,注册成功</string>
+    <string name="register_agree">注册即视为同意</string>
+    <string name="user_agree">用户使用协议</string>
+    <string name="login">登录</string>
+    <string name="restart">重启应用</string>
+    <string name="settings">设置</string>
+    <string name="dialog_login_view_cancel_bt">不，谢谢</string>
+    <string name="re_get_phone_reset">手机号更换，请稍后重新获取验证码</string>
+    <string name="phone_number_error">请输入正确的手机号</string>
+    <string name="please_input_code">请输入验证码</string>
+    <string name="re_get_code">验证码过期，请重新获取</string>
+    <string name="get_code">获取验证码</string>
+    <string name="please_first_get_code">请先获取验证码</string>
+    <string name="password_not_empty">密码不能为空</string>
+    <string name="re_get_code_invalid">验证码无效,请重新获取</string>
+    <string name="member_password_error">账号或密码错误，请重新输入</string>
+    <string name="password_error">密码长度需在6~16位之间，不能包含空格，请确认后重新输入</string>
+    <string name="member_not_found">用户不存在，请确认后重新填写</string>
+    <string name="get_code_faild">获取验证码失败，请稍后重试</string>
+    <string name="get_code_success">验证码发送成功，请查收!</string>
+    <string name="code_error">验证码错误请确认后重新输入</string>
+    <string name="member_name_duplicate">账号已经存在，请直接登录</string>
+    <string name="register_faild">注册失败，请重试</string>
+    <string name="input_password_hint">请输入密码 (6~16位）</string>
+    <string name="common_loading">飞奔加载中...</string>
+    <string name="search_hint">请输入关键字</string>
+    <string name="list_footer">到底啦</string>
+    <string name="common_get_fail">加载失败，戳下图标再试试</string>
+    <string name="common_no_data">这里空空如也</string>
+
+    <!-- 时间和日期 -->
+    <string name="minutes_ago">分钟前</string>
+    <string name="hours_ago">小时前</string>
+    <string name="days_ago">天前</string>
+    <string name="weeks_ago">周前</string>
+    <string name="year">年</string>
+    <string name="month">个月</string>
+    <string name="day">天</string>
+    <string name="hour">小时</string>
+    <string name="minute">分钟</string>
+
+    <string name="request_permission_picture_processing">需要存储权限来处理您的图片信息</string>
+    <string name="request_permission_access_phone_info">开眼视频推荐和观看记录等功能，需要访问手机识别码等信息</string>
+    <string name="slogan">- Your contribution is highly appreciated! -</string>
+    <string name="slogan_two">Daily appetizersfor your eyes. Bon eyepétit.</string>
+    <string name="slogan_description">让每一个人都开眼，开了又开。</string>
+    <string name="slogan_description_two">每日精选视频推介，让你大开眼界。</string>
+    <string name="select_car_brand_hot_key">热</string>
+</resources>

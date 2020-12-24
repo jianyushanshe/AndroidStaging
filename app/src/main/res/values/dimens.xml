@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <dimen name="actionbar_height">48dp</dimen>
+
+    <dimen name="image_view_border_width">1dp</dimen>
+    <dimen name="button_height">48dip</dimen>
+
+    <dimen name="dp_three">0.5dp</dimen>
+
+    <!-- 页面统一左右边距 -->
+    <dimen name="public_margin">16dip</dimen>
+    <!-- 按钮统一左右边距 -->
+    <dimen name="button_public_margin">50dip</dimen>
+
+    <!-- 我的页面item统一高度 -->
+    <dimen name="mine_page_item_height">48dip</dimen>
+    <dimen name="person_info_page_item_height">48dip</dimen>
+    <dimen name="about_info_page_item_height">58dip</dimen>
+    <dimen name="pay_page_item_height">48dip</dimen>
+    <dimen name="car_page_item_height">48dip</dimen>
+    <dimen name="interval_item_height">12dip</dimen>
+
+    <!-- text -->
+    <dimen name="text_size_36">36sp</dimen>
+    <dimen name="text_size_28">28sp</dimen>
+    <dimen name="text_size_25">25sp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
+    <dimen name="text_size_23">23sp</dimen>
+    <dimen name="text_size_22">22sp</dimen>
+    <dimen name="text_size_21">21sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_19">19sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_17">17sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_15">15sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_13">13sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_11">11sp</dimen>
+    <dimen name="text_size_10">10sp</dimen>
+    <dimen name="text_size_9">9sp</dimen>
+    <dimen name="text_keyboard">30sp</dimen>
+
+    <dimen name="text_large">20.0sp</dimen>
+    <dimen name="text_middle">18.0sp</dimen>
+    <dimen name="text_middles">17.0sp</dimen>
+    <dimen name="text_content">16.0sp</dimen>
+    <dimen name="text_contents">15.0sp</dimen>
+    <dimen name="text_low">14.0sp</dimen>
+    <dimen name="text_lower">13.0sp</dimen>
+    <dimen name="text_small">12.0sp</dimen>
+    <dimen name="text_smaller">11.0sp</dimen>
+    <dimen name="text_smallest">10.0sp</dimen>
+    <dimen name="text_little">12.0dip</dimen>
+
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp">
+
+    <LinearLayout
+        android:id="@+id/llay_search"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="6.5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="6.5dp"
+        android:layout_weight="8"
+        android:background="@drawable/bg_main_search"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+        <!-- 输入的搜索信息 -->
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="8"
+            android:background="@null"
+            android:drawableLeft="@mipmap/ic_search_grey"
+            android:drawablePadding="13dp"
+            android:gravity="center_vertical"
+            android:hint="@string/search_hint"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="12dp"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textColor="@color/text_hint_color_8c"
+            android:textColorHint="@color/text_hint_color_8c"
+            android:textCursorDrawable="@drawable/bg_edit_cursor_color"
+            android:textSize="@dimen/text_size_14">
+
+            <requestFocus />
+        </EditText>
+
+        <!-- 清空搜索文字按钮 -->
+
+        <ProgressBar
+            android:id="@+id/pb_search_loadding"
+            style="@style/ProgressBarMiddle"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/btn_clear_search_text"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="10dp"
+            android:padding="2dp"
+            android:src="@mipmap/ic_text_clear"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>
