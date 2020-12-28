@@ -20,4 +20,11 @@
         android:gravity="center"
         android:text="查看列表" />
 
+    <TextView
+        android:id="@+id/tv_bugly"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="测试异常上报" />
+
 </LinearLayout>

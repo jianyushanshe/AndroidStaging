@@ -3,6 +3,7 @@ package com.jianyushanshe.androidstaging
 import android.app.Application
 import android.content.Context
 import androidx.multidex.MultiDex
+import com.tencent.bugly.crashreport.CrashReport
 
 /**
  * Author:wangjianming
@@ -23,6 +24,7 @@ class MyApp : Application() {
     override fun onCreate() {
         super.onCreate()
         context = this
+        CrashReport.initCrashReport(this, BuildConfig.buglyId, BuildConfig.LOG_DEBUG)
     }
 
     companion object {

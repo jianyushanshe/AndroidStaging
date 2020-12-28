@@ -7,6 +7,7 @@ import com.jianyushanshe.androidstaging.common.base.BaseActivity
 import com.jianyushanshe.androidstaging.common.view.CustomActionbar
 import com.jianyushanshe.androidstaging.ui.mine.StationListActivity
 import com.jianyushanshe.androidstaging.util.openActivity
+import com.tencent.bugly.crashreport.CrashReport
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -23,6 +24,9 @@ class MainActivity : BaseActivity<MainViewModel>() {
         setActionbar(CustomActionbar.TYPE.ACTIONBAR_TYPE_OF_BACK_CENTERTEXT, "首页", null, 0, 0)
         tv_list.setOnClickListener {
            openActivity<StationListActivity>(this)
+        }
+        tv_bugly.setOnClickListener {
+            CrashReport.testJavaCrash()
         }
     }
 }

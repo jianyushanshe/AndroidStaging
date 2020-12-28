@@ -24,11 +24,15 @@ android {
         buildConfigField "int", "GET_BETA", GET_BETA
         buildConfigField "int", "GET_RELEASE", GET_RELEASE
         //设置网络访问地址
-        buildConfigField "String", "DEVELOP_URL", '"https://www.baidu.com"'//开发环境
-        buildConfigField "String", "BETA_URL", '"https://www.baidu.com"'//测试环境
+        buildConfigField "String", "DEVELOP_URL", '"https://mt-dev.haylion.cn"'//开发环境
+        buildConfigField "String", "BETA_URL", '"https://mt-test.haylion.cn"'//测试环境
         buildConfigField "String", "RELEASE_URL", '"https://www.baidu.com"'//正式环境
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
     }
 
     signingConfigs {
@@ -67,7 +71,8 @@ android {
             multiDexEnabled true
             applicationIdSuffix '.debug'
             versionNameSuffix '-debug'
-
+            buildConfigField "String", "buglyId", '"2ae68fda9a"'
+            buildConfigField "boolean", "LOG_DEBUG", "true"
             buildConfigField "int", "URL_TYPE", GET_DEVELOP//开发环境
             resValue "string", "app_name", "我的-开发"
 
@@ -79,7 +84,8 @@ android {
             shrinkResources false
             minifyEnabled false // 暂时不启用混淆
             zipAlignEnabled true
-
+            buildConfigField "String", "buglyId", '"2ae68fda9a"'
+            buildConfigField "boolean", "LOG_DEBUG", "false"
             buildConfigField "int", "URL_TYPE", GET_RELEASE//正式环境
 
             resValue "string", "app_name", "我的-生产"
@@ -91,9 +97,10 @@ android {
         beta {
             initWith release
             matchingFallbacks = ['release']
-
             applicationIdSuffix '.beta'
             versionNameSuffix '-beta'
+            buildConfigField "String", "buglyId", '"2ae68fda9a"'
+            buildConfigField "boolean", "LOG_DEBUG", "true"
 
             buildConfigField "int", "URL_TYPE", GET_BETA//测试环境
             resValue "string", "app_name", "我的-测试"
@@ -162,4 +169,7 @@ dependencies {
     implementation 'com.github.chrisbanes:PhotoView:2.3.0'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.android.support:multidex:1.0.3'
+
+    implementation 'com.tencent.bugly:crashreport:3.3.3'
+    implementation 'com.tencent.bugly:nativecrashreport:3.7.700'
 }
