@@ -17,7 +17,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
-        android:name="com.jianyushanshe.androidstaging.MyApp"
+        android:name=".MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -26,17 +26,18 @@
         android:supportsRtl="true"
         android:theme="@style/RailWayApplication"
         tools:targetApi="n">
-        <activity android:name="com.jianyushanshe.androidstaging.ui.mine.StationListActivity"></activity>
-        <activity android:name="com.jianyushanshe.androidstaging.common.base.BaseListActivity" />
-        <activity android:name="com.jianyushanshe.androidstaging.ui.user.LoginActivity" />
-        <activity android:name="com.jianyushanshe.androidstaging.ui.home.WelcomeActivity">
+        <activity android:name="com.jianyushanshe.androidstaging.common.webview.CommonWebActivity"></activity>
+        <activity android:name=".ui.mine.StationListActivity" />
+        <activity android:name=".common.base.BaseListActivity" />
+        <activity android:name=".ui.user.LoginActivity" />
+        <activity android:name=".ui.home.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.jianyushanshe.androidstaging.ui.home.MainActivity" />
+        <activity android:name=".ui.home.MainActivity" />
     </application>
 
 </manifest>

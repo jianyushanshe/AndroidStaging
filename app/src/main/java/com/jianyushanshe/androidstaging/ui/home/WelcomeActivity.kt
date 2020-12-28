@@ -127,7 +127,7 @@ class WelcomeActivity : BaseActivity<WelcomeViewModel>() {
         if (UserManager.isLogin()) {
             openActivity<MainActivity>(this)
         } else {
-            LoginActivity.start(this)
+            openActivity<LoginActivity>(this)
         }
     }
 

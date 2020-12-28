@@ -69,10 +69,4 @@ class LoginActivity : BaseActivity<LoginViewModel>() {
             finish()
         }
     }
-
-    companion object {
-        fun start(context: Context) {
-            context.startActivity(Intent(context, LoginActivity::class.java))
-        }
-    }
 }

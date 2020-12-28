@@ -6,6 +6,7 @@ import com.jianyushanshe.androidstaging.R
 import com.jianyushanshe.androidstaging.common.base.BaseActivity
 import com.jianyushanshe.androidstaging.common.view.CustomActionbar
 import com.jianyushanshe.androidstaging.ui.mine.StationListActivity
+import com.jianyushanshe.androidstaging.common.webview.CommonWebActivity
 import com.jianyushanshe.androidstaging.util.openActivity
 import com.tencent.bugly.crashreport.CrashReport
 import kotlinx.android.synthetic.main.activity_main.*
@@ -27,6 +28,9 @@ class MainActivity : BaseActivity<MainViewModel>() {
         }
         tv_bugly.setOnClickListener {
             CrashReport.testJavaCrash()
+        }
+        tv_webview.setOnClickListener {
+            CommonWebActivity.open(this,"https://www.baidu.com/","测试网页加载")
         }
     }
 }
