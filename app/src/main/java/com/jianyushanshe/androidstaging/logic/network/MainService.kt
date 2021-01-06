@@ -34,4 +34,10 @@ interface MainService {
      */
     @POST("account/passenger/login")
     fun login(@Body request: LoginRequest): Call<LoginResponse>
+
+    /**
+     * 获取版本号
+     */
+    @GET("account/latest-version")
+    fun getVersionCode(@QueryMap map: MutableMap<String, Any>): Call<VersionCodeResponse>
 }

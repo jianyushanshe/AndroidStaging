@@ -27,6 +27,8 @@ object MainRepository {
      */
     fun getUser() = MainDao.getUser()
 
+
+
     /**
      * 登录
      */
@@ -67,6 +69,19 @@ object MainRepository {
                 Result.failure(ResponseCodeException(response.code, response.msg))
             }
         }
+
+    /**
+     * 获取版本号
+     */
+    fun getVersionCode() = fire(Dispatchers.IO) {
+        val response = NetWork.getVersionCode()
+        if (response.code == SUCCESS) {
+            val versionEntity = response.data
+            Result.success(versionEntity)
+        } else {
+            Result.failure(ResponseCodeException(response.code, response.msg))
+        }
+    }
 
 
 

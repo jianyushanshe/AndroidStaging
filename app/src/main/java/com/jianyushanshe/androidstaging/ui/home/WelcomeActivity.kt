@@ -7,9 +7,12 @@ import android.view.animation.Animation
 import android.view.animation.ScaleAnimation
 import androidx.lifecycle.ViewModelProvider
 import com.gyf.immersionbar.ImmersionBar
+import com.jianyushanshe.androidstaging.BuildConfig
 import com.jianyushanshe.androidstaging.R
-import com.jianyushanshe.androidstaging.extension.edit
 import com.jianyushanshe.androidstaging.common.base.BaseActivity
+import com.jianyushanshe.androidstaging.common.helper.AppUpdateHelper
+import com.jianyushanshe.androidstaging.extension.edit
+import com.jianyushanshe.androidstaging.logic.network.exceptionDispose
 import com.jianyushanshe.androidstaging.ui.user.LoginActivity
 import com.jianyushanshe.androidstaging.util.UserManager
 import com.jianyushanshe.androidstaging.util.getStringResId
@@ -85,7 +88,7 @@ class WelcomeActivity : BaseActivity<WelcomeViewModel>() {
                     getStringResId(R.string.cancel)
                 )
             }
-            .request { allGranted, grantedList, deniedList ->
+            .request { _, _, _ ->
                 requestReadPhoneStatePermission()
             }
     }
@@ -110,7 +113,7 @@ class WelcomeActivity : BaseActivity<WelcomeViewModel>() {
                     getStringResId(R.string.cancel)
                 )
             }
-            .request { allGranted, grantedList, deniedList ->
+            .request { _, _, _ ->
                 setContentView(R.layout.activity_welcome)
                 ivSlogan.startAnimation(alphaAnimation)
                 ivSplashPicture.startAnimation(scaleAnimation)

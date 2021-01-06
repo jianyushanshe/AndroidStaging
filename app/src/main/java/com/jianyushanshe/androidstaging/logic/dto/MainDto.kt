@@ -1,5 +1,6 @@
 package com.jianyushanshe.androidstaging.logic.dto
 
+import com.jianyushanshe.androidstaging.logic.model.AppVersionEntity
 import com.jianyushanshe.androidstaging.logic.model.BaseResponse
 import com.jianyushanshe.androidstaging.logic.model.User
 import com.jianyushanshe.androidstaging.logic.model.WorkOrder
@@ -7,7 +8,7 @@ import com.jianyushanshe.androidstaging.logic.model.WorkOrder
 /**
  * Author:wangjianming
  * Time:2020/12/5 16:21
- * Description:MainDto
+ * Description:MainDto 请求和响应体
  */
 
 class LoginRequest(var phoneNum: String, var captcha: String)
@@ -16,3 +17,4 @@ class VerificationCodeRequest(var phoneNum: String)
 class VerificationCodeResponse : BaseResponse<Boolean>()
 class WorkOrderRequest(var page: Int, var size: Int)
 class WordOrderResponse : BaseResponse<WorkOrder>()
+class VersionCodeResponse : BaseResponse<AppVersionEntity>()

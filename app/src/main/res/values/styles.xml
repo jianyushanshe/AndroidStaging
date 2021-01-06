@@ -376,4 +376,13 @@
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/app_theme_color</item>
     </style>
+
+    <style name="BaseDialog" parent="android:Theme.Light">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+    </style>
 </resources>

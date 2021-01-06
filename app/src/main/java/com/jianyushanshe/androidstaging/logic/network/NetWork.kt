@@ -22,13 +22,17 @@ import kotlin.coroutines.suspendCoroutine
 object NetWork {
     private val mainService = ServiceCreator.create<MainService>()
 
-
+    //登录
     suspend fun login(request: LoginRequest) = mainService.login(request).await(true)
+    //发送验证码
     suspend fun sendVerificationCode(request: VerificationCodeRequest) =
         mainService.sendVerificationCode(request).await(true)
+    //获取工单列表
     suspend fun getWorkOrderList(request: WorkOrderRequest) =mainService.getWorkOrderList(
         mutableMapOf("page" to request.page,"size" to request.size)
     ).await(true)
+    //获取版本号
+    suspend fun getVersionCode() = mainService.getVersionCode( mutableMapOf("target" to 0,"platform" to 1)).await(false)
 
 
 

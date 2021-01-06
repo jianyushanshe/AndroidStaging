@@ -122,24 +122,4 @@ object ServiceCreator {
         return sb.toString()
     }
 
-
-    class BasicParamsInterceptor : Interceptor {
-        override fun intercept(chain: Interceptor.Chain): Response {
-            val originalRequest = chain.request()
-            val originalHttpUrl = originalRequest.url()
-            val url = originalHttpUrl.newBuilder().apply {
-                addQueryParameter("udid", getDeviceSerial())
-                addQueryParameter("vc", appVersionCode.toString())
-                addQueryParameter("vn", appVersionName)
-                addQueryParameter("size", screenPixel())
-                addQueryParameter("deviceModel", deviceModel)
-                addQueryParameter("first_channel", deviceBrand)
-                addQueryParameter("last_channel", deviceBrand)
-                addQueryParameter("system_version_code", "${Build.VERSION.SDK_INT}")
-            }.build()
-            val request = originalRequest.newBuilder().url(url)
-                .method(originalRequest.method(), originalRequest.body()).build()
-            return chain.proceed(request)
-        }
-    }
 }
